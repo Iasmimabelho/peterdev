@@ -1,8 +1,12 @@
+import fotoCacaNiquel from '../../imagem/meu.jpeg';
+import fotoRobo from '../../imagem/robo.jpeg';
+import fotoHistoria from '../../imagem/his.png';
+import fotoManhwa from '../../imagem/nebula.png';
+import fotoDog from '../../imagem/dog.png';
+import fotomimi from '../../imagem/mimi.jpeg';
+
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router";
 import { useState, useEffect } from "react";
-
-
-// ─── Spider-Web SVG decoration ───────────────────────────────────────────────
 function WebCorner({ className }: { className: string }) {
   return (
     <svg
@@ -198,14 +202,14 @@ function Sobre() {
         {/* BIO + FOTO (ARRUMADO) */}
         <div className="grid md:grid-cols-5 gap-12 items-start mb-16">
 
-          {/* FOTO */}
-          <div className="md:col-span-2 flex justify-center md:justify-start">
-            <img
-              src="/img/mimi.jpeg"
-              alt="Mimi"
-              className="w-56 h-72 rounded-2xl object-cover border-2 border-[#cc1418]/40 shadow-[0_0_40px_rgba(204,20,24,0.15)]"
-            />
-          </div>
+         <div className="md:col-span-2 flex justify-center md:justify-start">
+  
+  <img 
+  src={fotomimi} 
+  alt="Minha foto" 
+  className="w-56 h-72 rounded-2xl object-cover border-2 border-[#cc1418]/40 shadow-[0_0_40px_rgba(204,20,24,0.15)]" 
+/>
+</div>
 
           {/* TEXTO */}
           <div className="md:col-span-3">
@@ -265,7 +269,7 @@ function Sobre() {
   );
 }
 
-// ─── Página: Projetos ─────────────────────────────────────────────────────────
+
 const projetos = [
   {
     id: 1,
@@ -273,11 +277,10 @@ const projetos = [
     nome: "Caça-Níquel",
     tipo: "Hardware",
     cor: "#e6a817",
-    descricao:
-      "Máquina caça-níquel construída com componentes físicos — display LCD, botões, LEDs e lógica de sorteio implementada em Arduino. Projeto desenvolvido para explorar eletrônica embarcada e interatividade física.",
-    tags: ["Arduino", "C++", "Eletrônica", "LCD", "Hardware"],
-    foto: "/img/meu.jpeg",
-    fotoAlt: "Máquina caça-níquel arcade de perto",
+    descricao: "Máquina caça-níquel construída com componentes físicos.",
+    tags: ["Arduino", "C++", "Hardware"],
+    foto: fotoCacaNiquel, // Use a variável, não texto
+    fotoAlt: "Máquina caça-níquel arcade",
   },
   {
     id: 2,
@@ -285,11 +288,10 @@ const projetos = [
     nome: "Robô Autônomo",
     tipo: "Hardware",
     cor: "#5b8fff",
-    descricao:
-      "Robô construído com estrutura física e programação em Arduino. Capaz de navegar pelo ambiente evitando obstáculos através de sensores ultrassônicos e tomar decisões em tempo real.",
-    tags: ["Arduino", "Robótica", "Sensores", "C++", "Hardware"],
-    foto: "/img/robo.jpeg",
-    fotoAlt: "meus robos",
+    descricao: "Robô capaz de navegar evitando obstáculos.",
+    tags: ["Arduino", "Robótica", "Hardware"],
+    foto: fotoRobo,
+    fotoAlt: "Meus robôs",
   },
   {
     id: 3,
@@ -297,11 +299,10 @@ const projetos = [
     nome: "Site de Historia",
     tipo: "Web",
     cor: "#f97316",
-    descricao:
-      "Iluminando direitos, fortalecendo trabalhadores — um projeto retrofuturista para pensar a organização operária.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsivo"],
-    foto: "/img/his.png",
-    fotoAlt: "SIte ",
+    descricao: "Projeto retrofuturista sobre organização operária.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    foto: fotoHistoria,
+    fotoAlt: "Site de história",
   },
   {
     id: 4,
@@ -309,11 +310,10 @@ const projetos = [
     nome: "Site de Manhwa",
     tipo: "Web",
     cor: "#a855f7",
-    descricao:
-      "Plataforma de leitura e recomendação de manhwas com catálogo organizado por gênero, sistema de favoritos e fichas detalhadas de cada obra. Um projeto para os apaixonados por HQs coreanas.",
-    tags: ["HTML", "CSS", "JavaScript", "DOM", "Manhwa"],
-    foto: "/img/nebula.png",
-    fotoAlt: "Livro de quadrinhos com ilustração de personagem",
+    descricao: "Plataforma de leitura de HQs coreanas.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    foto: fotoManhwa,
+    fotoAlt: "Site de manhwa",
   },
   {
     id: 5,
@@ -321,11 +321,10 @@ const projetos = [
     nome: "ONG de Animais",
     tipo: "Web",
     cor: "#22c55e",
-    descricao:
-      "Site para ONG de proteção animal com galeria de pets disponíveis para adoção, formulário de cadastro de adotantes e seção de doações. Projeto com propósito social real.",
-    tags: ["HTML", "CSS", "JavaScript", "Formulários", "ONG"],
-    foto: "/img/dog.png",
-    fotoAlt: "projeto ong SOS Vida",
+    descricao: "Site para proteção animal e adoção.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    foto: fotoDog,
+    fotoAlt: "Projeto ONG SOS Vida",
   },
 ];
 
